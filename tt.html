@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Profenaa Charitable Trust | Education Programs</title>
+  <link rel="stylesheet" href="educatinprog.css">
+  <style>
+    /* =========== Reset ============= */
+.educatinprog-bg,
+.educatinprog-main,
+.educatinprog-header,
+.educatinprog-title,
+.educatinprog-subtitle,
+.educatinprog-initiatives,
+.educatinprog-objectives,
+.educatinprog-section-title,
+.educatinprog-cards,
+.educatinprog-card,
+.educatinprog-img {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* =========== Background ============= */
+.educatinprog-bg {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #d3f1fd 0%, #faf3e3 100%);
+  padding: 0 0 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  animation: educatinprogbgfadein 2s ease;
+}
+@keyframes educatinprogbgfadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* =========== Main content area ============= */
+.educatinprog-main {
+  max-width: 1500px;
+  width: 95%;
+  margin: 40px auto;
+  padding: 36px 18px 30px 18px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 24px;
+  box-shadow: 0 6px 42px 0 rgba(80,175,243,0.18);
+  animation: educatinprogzoomIn 1.2s cubic-bezier(.6,-0.3,.25,1.35);
+}
+@keyframes educatinprogzoomIn {
+  from {
+    transform: scale(0.85) translateY(40px);
+    opacity: 0.67;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* =========== Header ============= */
+.educatinprog-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.educatinprog-title {
+  font-size: 2.3rem;
+  color: #319ad9;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  animation: educatinprogh1slide 1.3s cubic-bezier(.58,.3,.43,.92);
+}
+@keyframes educatinprogh1slide {
+  from { transform: translateY(-40px) scale(1.1); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1;}
+}
+.educatinprog-subtitle {
+  color: #594a38;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 6px;
+  letter-spacing: .02em;
+  opacity: 0.88;
+}
+
+/* =========== Objectives ============= */
+.educatinprog-objectives {
+  margin-bottom: 28px;
+  animation: educatinprogfadein 1.6s 0.3s forwards;
+  opacity: 0;
+}
+@keyframes educatinprogfadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.educatinprog-objectives ul {
+  margin: 10px 0 0 0;
+  padding-left: 22px;
+}
+.educatinprog-objectives li {
+  padding: 8px 0;
+  color: #355c7d;
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: color 0.2s;
+}
+.educatinprog-objectives li:hover {
+  color: #164f1c;
+}
+
+/* =========== Section Title ============= */
+.educatinprog-section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #3a7eaa;
+  margin-bottom: 12px;
+  display: inline-block;
+  animation: educatinprogtitleslide 1s;
+}
+@keyframes educatinprogtitleslide {
+  from { transform: scale(.9) rotate(-2deg); opacity: 0; }
+  to { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* =========== Initiatives Cards ============= */
+.educatinprog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 15px 0 0 0;
+  justify-content: center;
+}
+
+.educatinprog-card {
+  background: #fffefb;
+  border-radius: 20px;
+  box-shadow: 0 2px 18px 0 rgba(80,175,243,0.12);
+  flex: 1 0 calc(45% - 11px);
+  min-width: 220px;
+  max-width: 270px;
+  padding: 22px 16px 10px 16px;
+  transition: transform 0.28s cubic-bezier(.28,.68,.43,1.1), box-shadow 0.18s;
+  cursor: pointer;
+  animation: educatinprogcardin 1.1s forwards;
+  opacity: 0;
+}
+.educatinprog-card:nth-child(1) { animation-delay: .2s; }
+.educatinprog-card:nth-child(2) { animation-delay: .35s; }
+.educatinprog-card:nth-child(3) { animation-delay: .5s; }
+.educatinprog-card:nth-child(4) { animation-delay: .65s; }
+.educatinprog-card:nth-child(5) { animation-delay: .8s; }
+@keyframes educatinprogcardin {
+  from { transform: scale(.9) rotate(-4deg); opacity: 0; }
+  to   { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.educatinprog-card:hover {
+  transform: scale(1.05) translateY(-8px) rotate(1deg);
+  box-shadow: 0 8px 28px rgba(80,175,243,0.24);
+}
+
+.educatinprog-card h3 {
+  color: #2196f3;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 12px 0 8px 0;
+  font-family: inherit;
+}
+.educatinprog-card p {
+  font-size: .97rem;
+  color: #34534e;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.educatinprog-img {
+  display: block;
+  margin: 0 auto;
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(49,154,217,0.2);
+  transition: filter 0.45s cubic-bezier(.62,-0.12,.56,1.08), opacity .7s;
+  animation: educatinprogimgfadein 1.3s;
+}
+@keyframes educatinprogimgfadein {
+  from { opacity: 0; filter: blur(6px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+
+/* =========== Responsive ============= */
+@media only screen and (max-width: 850px) {
+  .educatinprog-main { max-width: 96vw; }
+  .educatinprog-cards { gap: 14px; }
+  .educatinprog-card { min-width: 160px; max-width: 100%; }
+}
+@media only screen and (max-width: 600px) {
+  .educatinprog-main { padding: 18px 7px; }
+  .educatinprog-title { font-size: 1.6rem; }
+  .educatinprog-cards { flex-direction: column; gap: 22px;}
+  .educatinprog-card { min-width: 90vw; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="educatinprog-bg">
+    <main class="educatinprog-main">
+      <div class="educatinprog-header">
+        <h1 class="educatinprog-title">Education Programs</h1>
+        <p class="educatinprog-subtitle">Empowering Communities Through Learning</p>
+      </div>
+      <section class="educatinprog-objectives">
+        <h2 class="educatinprog-section-title">🎯 Objectives</h2>
+        <ul>
+          <li>Bridge the gap between privileged and underprivileged learners.</li>
+          <li>Support children from economically weaker sections to pursue schooling.</li>
+          <li>Encourage higher education for first-generation learners.</li>
+          <li>Provide life skills and digital literacy to make students future-ready.</li>
+        </ul>
+      </section>
+      <section class="educatinprog-initiatives">
+        <h2 class="educatinprog-section-title">🌱 Key Initiatives</h2>
+        <div class="educatinprog-cards">
+          <div class="educatinprog-card" onclick="educatinprogRefreshImg(this)">
+            <img src="https://placeimg.com/100/100/people" alt="Initiative 1" class="educatinprog-img" />
+            <h3>School Support Program</h3>
+            <p>Assists children from low-income families with learning materials, fees, uniforms & guidance to prevent school dropouts.</p>
+          </div>
+          <div class="educatinprog-card" onclick="educatinprogRefreshImg(this)">
+            <img src="https://placeimg.com/100/100/tech" alt="Initiative 2" class="educatinprog-img" />
+            <h3>Scholarship & Sponsorships</h3>
+            <p>Special scholarships for deserving students, especially orphans, single-parent children & girls, ensuring continuity in education.</p>
+          </div>
+          <div class="educatinprog-card" onclick="educatinprogRefreshImg(this)">
+            <img src="https://placeimg.com/100/100/arch" alt="Initiative 3" class="educatinprog-img" />
+            <h3>Skill-Based Education</h3>
+            <p>Short-term courses in computers, digital skills, communication & vocational training to increase youth employability.</p>
+          </div>
+          <div class="educatinprog-card" onclick="educatinprogRefreshImg(this)">
+            <img src="https://placeimg.com/100/100/nature" alt="Initiative 4" class="educatinprog-img" />
+            <h3>Awareness & Mentorship</h3>
+            <p>Workshops on career guidance, health, and value-based education for holistic development.</p>
+          </div>
+          <div class="educatinprog-card" onclick="educatinprogRefreshImg(this)">
+            <img src="https://placeimg.com/100/100/animals" alt="Initiative 5" class="educatinprog-img" />
+            <h3>Adult & Community Education</h3>
+            <p>Literacy programs for adults and women to encourage lifelong learning and community growth.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="educatinprog.js">
+    // Refreshes card image with animation
+function educatinprogRefreshImg(card) {
+  let img = card.querySelector('.educatinprog-img');
+  if (img) {
+    img.style.opacity = "0.3";
+    img.style.filter = "blur(10px)";
+    // Pick a new random image from placeholder categories
+    let categories = ["people", "tech", "arch", "nature", "animals"];
+    let randCat = categories[Math.floor(Math.random() * categories.length)];
+    let randB = 80 + Math.floor(Math.random() * 25);
+    let randImg = `https://placeimg.com/${randB}/${randB}/${randCat}`;
+    setTimeout(() => {
+      img.src = randImg;
+      img.style.opacity = "1";
+      img.style.filter = "blur(0)";
+    }, 650);
+  }
+}
+
+// Animate cards on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.educatinprog-card');
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.style.opacity = "1";
+    }, 210 + 160 * index);
+  });
+});
+
+  </script>
+</body>
+</html>

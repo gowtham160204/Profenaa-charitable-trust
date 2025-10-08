@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.skill-deve-container {
+    width: 100%;
+    background: #f8f9fa;
+}
+
+/* Header Section */
+.skill-deve-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #19921b 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-deve-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    background-size: 50px 50px;
+    animation: skill-deve-float 20s linear infinite;
+}
+
+.skill-deve-header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.skill-deve-main-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: skill-deve-slideInUp 1s ease-out 0.5s forwards;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.skill-deve-subtitle {
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: skill-deve-slideInUp 1s ease-out 1s forwards;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Section Styles */
+.skill-deve-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.skill-deve-section:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.skill-deve-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.skill-deve-section-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.skill-deve-section-content.skill-deve-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-deve-reverse .skill-deve-section-content {
+    flex-direction: row-reverse;
+}
+
+.skill-deve-text-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.skill-deve-image-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.skill-deve-section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: skill-deve-slideInLeft 0.8s ease-out 0.3s forwards;
+}
+
+.skill-deve-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(45deg, #0a4f0c, #2c3e50);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: skill-deve-scaleX 0.8s ease-out 0.8s forwards;
+}
+
+.skill-deve-description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: skill-deve-fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+.skill-deve-points {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-deve-point {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: skill-deve-slideInLeft 0.6s ease-out forwards;
+}
+
+.skill-deve-point:nth-child(1) { animation-delay: 0.4s; }
+.skill-deve-point:nth-child(2) { animation-delay: 0.6s; }
+.skill-deve-point:nth-child(3) { animation-delay: 0.8s; }
+.skill-deve-point:nth-child(4) { animation-delay: 1s; }
+
+.skill-deve-point::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #34db4d;
+    font-size: 0.8rem;
+    animation: skill-deve-pulse 2s ease-in-out infinite;
+}
+
+.skill-deve-section-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: scale(0.8) rotate(3deg);
+    animation: skill-deve-imageIn 1s ease-out 0.5s forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-deve-section-image:hover {
+    transform: scale(1.02) rotate(0deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+.skill-deve-footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #14592a 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.skill-deve-footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-deve-footer-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: skill-deve-fadeInUp 1s ease-out 0.5s forwards;
+}
+
+/* Animations */
+@keyframes skill-deve-slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes skill-deve-slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes skill-deve-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes skill-deve-scaleX {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes skill-deve-imageIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) rotate(3deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes skill-deve-float {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+@keyframes skill-deve-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+@keyframes skill-deve-bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes skill-deve-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes skill-deve-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+@keyframes skill-deve-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skill-deve-main-title {
+        font-size: 2.5rem;
+    }
+    
+    .skill-deve-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .skill-deve-section-title {
+        font-size: 2rem;
+    }
+    
+    .skill-deve-section-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .skill-deve-reverse .skill-deve-section-content {
+        flex-direction: column;
+    }
+    
+    .skill-deve-section {
+        padding: 60px 0;
+    }
+    
+    .skill-deve-content-wrapper {
+        padding: 0 15px;
+    }
+    
+    .skill-deve-section-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-deve-main-title {
+        font-size: 2rem;
+    }
+    
+    .skill-deve-subtitle {
+        font-size: 1rem;
+    }
+    
+    .skill-deve-section-title {
+        font-size: 1.8rem;
+    }
+    
+    .skill-deve-section {
+        padding: 40px 0;
+    }
+    
+    .skill-deve-header {
+        padding: 60px 0;
+    }
+    
+    .skill-deve-section-image {
+        height: 200px;
+    }
+    
+    .skill-deve-description,
+    .skill-deve-point {
+        font-size: 1rem;
+    }
+}
+
+/* Loading Animation */
+.skill-deve-loading {
+    opacity: 0;
+    animation: skill-deve-fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes skill-deve-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* doijwdojerfoije */
+.hero-img-connect-all-container {
+  height: 80vh;
+  background: url('../assets/pexels-mirza-sifat-ahmed-2620318-31417428.jpg') no-repeat center center;  /* https://images.unsplash.com/photo-1507525428034-b723cf961d3e */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  position: relative;
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}

@@ -1,0 +1,566 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .skill-program-container {
+            width: 100%;
+            background: #f8f9fa;
+        }
+
+        /* Hero Section */
+        .skill-program-hero {
+            height: 100vh;
+            background: linear-gradient(rgba(34, 139, 34, 0.8), rgba(46, 125, 50, 0.8)), 
+                        url('https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: skill-program-hero-zoom 20s ease-in-out infinite alternate;
+        }
+
+        .skill-program-hero-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+            animation: skill-program-fade-in-up 2s ease;
+        }
+
+        .skill-program-hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+            animation: skill-program-glow-text 3s ease-in-out infinite alternate;
+        }
+
+        .skill-program-hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            animation: skill-program-slide-in-right 2s ease 0.5s both;
+        }
+
+        .skill-program-hero-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.85;
+            animation: skill-program-fade-in 2s ease 1s both;
+        }
+
+        .skill-program-divider {
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(45deg, #144026, #1f3f20);
+            margin: 30px auto;
+            border-radius: 2px;
+            animation: skill-program-expand 2s ease 1.5s both;
+            transform: scaleX(0);
+        }
+
+        /* Section Styles */
+        .skill-program-section {
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .skill-program-section.skill-program-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-program-section-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .skill-program-section-title {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #2e7d32;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            animation: skill-program-bounce-in 1s ease;
+        }
+
+        .skill-program-section-underline {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #4caf50, #2ecc71);
+            margin: 0 auto 50px;
+            border-radius: 2px;
+            animation: skill-program-slide-in-left 1s ease 0.3s both;
+        }
+
+        .skill-program-intro-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #424242;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+            animation: skill-program-fade-in-up 1s ease 0.5s both;
+        }
+
+        /* Objectives Section */
+        .skill-program-objectives {
+            background: linear-gradient(135deg, #f9f9f9 0%, #f7f7f7 100%);
+            color: white;
+        }
+
+        .skill-program-objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .skill-program-objective-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: skill-program-card-float 1s ease forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-program-objective-card:nth-child(1) { animation-delay: 0.2s; }
+        .skill-program-objective-card:nth-child(2) { animation-delay: 0.4s; }
+        .skill-program-objective-card:nth-child(3) { animation-delay: 0.6s; }
+        .skill-program-objective-card:nth-child(4) { animation-delay: 0.8s; }
+
+        .skill-program-objective-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-program-objective-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .skill-program-objective-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* Training Areas Section */
+        .skill-program-training-areas {
+            background: url('https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .skill-program-training-areas::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .skill-program-training-areas .skill-program-section-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+
+        .skill-program-training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .skill-program-training-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: scale(0.8);
+            opacity: 0;
+            animation: skill-program-scale-up 0.8s ease forwards;
+            transition: all 0.3s ease;
+        }
+
+        .skill-program-training-card:nth-child(1) { animation-delay: 0.1s; }
+        .skill-program-training-card:nth-child(2) { animation-delay: 0.3s; }
+        .skill-program-training-card:nth-child(3) { animation-delay: 0.5s; }
+        .skill-program-training-card:nth-child(4) { animation-delay: 0.7s; }
+
+        .skill-program-training-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-program-training-card-header {
+            height: 200px;
+            background: linear-gradient(45deg, #4caf50, #2ecc71);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-program-training-card-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            animation: skill-program-shimmer 3s ease-in-out infinite;
+        }
+
+        .skill-program-training-card-body {
+            padding: 30px;
+        }
+
+        .skill-program-training-card h3 {
+            font-size: 1.6rem;
+            color: #2e7d32;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .skill-program-training-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-program-training-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 20px;
+            color: #424242;
+            transition: color 0.3s ease;
+        }
+
+        .skill-program-training-list li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-program-training-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-size: 0.8rem;
+        }
+
+        .skill-program-training-list li:hover {
+            color: #2e7d32;
+            padding-left: 25px;
+        }
+
+        /* Social Impact Section */
+        .skill-program-impact {
+            background: linear-gradient(135deg, #fefefe 0%, #2e7d32 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-program-impact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../assets/pexels-hiteshchoudhary-1739842.jpg') center/cover no-repeat;
+            opacity: 0.1;
+            animation: skill-program-parallax-slow 20s linear infinite;
+        }
+
+        .skill-program-impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .skill-program-impact-item {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(50px);
+            opacity: 0;
+            animation: skill-program-float-up 1s ease forwards;
+        }
+
+        .skill-program-impact-item:nth-child(1) { animation-delay: 0.2s; }
+        .skill-program-impact-item:nth-child(2) { animation-delay: 0.4s; }
+        .skill-program-impact-item:nth-child(3) { animation-delay: 0.6s; }
+        .skill-program-impact-item:nth-child(4) { animation-delay: 0.8s; }
+
+        .skill-program-impact-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #32811c;
+        }
+
+        .skill-program-impact-item p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .skill-program-cta {
+            background: linear-gradient(45deg, #2e7d32, #1b5e20);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .skill-program-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: skill-program-pulse 2s ease-in-out infinite;
+        }
+
+        .skill-program-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes skill-program-fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes skill-program-slide-in-right {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes skill-program-slide-in-left {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes skill-program-fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes skill-program-expand {
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        @keyframes skill-program-bounce-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes skill-program-card-float {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes skill-program-scale-up {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes skill-program-float-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes skill-program-glow-text {
+            from {
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+            }
+            to {
+                text-shadow: 3px 3px 20px rgba(255,255,255,0.5), 0 0 30px rgba(76, 175, 80, 0.7);
+            }
+        }
+
+        @keyframes skill-program-hero-zoom {
+            from {
+                background-size: 100%;
+            }
+            to {
+                background-size: 110%;
+            }
+        }
+
+        @keyframes skill-program-shimmer {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
+        @keyframes skill-program-parallax-slow {
+            from {
+                transform: translateX(-100px);
+            }
+            to {
+                transform: translateX(100px);
+            }
+        }
+
+        @keyframes skill-program-pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skill-program-hero-title {
+                font-size: 2.5rem;
+            }
+
+            .skill-program-hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .skill-program-hero-description {
+                font-size: 1rem;
+            }
+
+            .skill-program-section-title {
+                font-size: 2.2rem;
+            }
+
+            .skill-program-objectives-grid,
+            .skill-program-training-grid,
+            .skill-program-impact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .skill-program-training-card-header {
+                height: 150px;
+            }
+
+            .skill-program-section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill-program-hero-title {
+                font-size: 2rem;
+            }
+
+            .skill-program-hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .skill-program-section-title {
+                font-size: 1.8rem;
+            }
+
+            .skill-program-intro-text {
+                font-size: 1.1rem;
+            }
+
+            .skill-program-objective-card,
+            .skill-program-training-card-body {
+                padding: 20px;
+            }
+        }
+
+        /* Scroll indicator */
+        .skill-program-scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(45deg, #172c8b, #667eea);
+            transform-origin: left;
+            transform: scaleX(0);
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+        .hero-img-connect-all-container {
+  height: 80vh;
+ background: url('../assets/pexels-mary-taylor-5896422.jpg') no-repeat center center;  /* https://images.unsplash.com/photo-1507525428034-b723cf961d3e */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  position: relative;
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}

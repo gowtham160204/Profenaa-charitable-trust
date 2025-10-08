@@ -1,0 +1,134 @@
+
+  .container {
+    max-width: 1200px;
+    margin: 100px auto;
+    margin-top: 100px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 35px 40px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  }
+
+  /* Header texts */
+  h1 {
+    color:#0c2314;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  p.welcome {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  /* Form */
+  form {
+    display: grid;
+    gap: 18px;
+  }
+  label {
+    font-weight: 600;
+    color: #555;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+  }
+  input:hover, textarea:hover,
+  input:focus, textarea:focus {
+    border-color: #50c878;
+    box-shadow: 0 0 8px rgba(63, 81, 181, 0.3);
+    outline: none;
+  }
+  button {
+    background-color: #50c878;
+    color: #fff;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #1b4f1c;
+  }
+
+  /* Contact info section */
+  .contact-info {
+    margin-top: 30px;
+    border-top: 1px solid #e1e4e8;
+    padding-top: 20px;
+    font-size: 1rem;
+    color: #555;
+  }
+  .contact-item {
+    margin-bottom: 12px;
+  }
+  .contact-item span {
+    font-weight: 600;
+  }
+
+  /* Social media icons */
+  .social-links {
+    margin-top: 15px;
+  }
+  .social-links a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #50c878;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+  .social-links a:hover {
+    color: #303f9f;
+  }
+
+  /* Business hours */
+  .business-hours {
+    margin-top: 18px;
+    font-style: italic;
+    color: #666;
+  }
+
+  /* Confirmation message */
+  .thanks-message {
+    margin-top: 20px;
+    text-align: center;
+    color: #4caf50;
+    font-weight: 600;
+    display: none;
+  }
+
+  /* Privacy note */
+  .privacy-note {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  .privacy-note a {
+    color: #50c878;
+    text-decoration: none;
+  }
+  .privacy-note a:hover {
+    text-decoration: underline;
+  }
+  /* kjbkuygkuyvkjy */
+  .hero-img-connect-all-container {
+  height: 80vh;
+ background: url('../assets/pexels-mary-taylor-5896422.jpg') no-repeat center center;  /* https://images.unsplash.com/photo-1507525428034-b723cf961d3e */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  position: relative;
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}

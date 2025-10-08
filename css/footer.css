@@ -1,0 +1,126 @@
+.footer-main {
+      background: linear-gradient(135deg, #0c170b 0%, #062a04 100%);
+      color: #fafafa;
+      padding: 48px 0 18px 0;
+      width: 100vw;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      letter-spacing: 0.01em;
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+      gap: 36px;
+      align-items: flex-start;
+      padding: 0 32px;
+    }
+    .footer-section {
+      margin-bottom: 12px;
+    }
+    .footer-section h3 {
+      font-size: 1rem;
+      margin: 0 0 18px 0;
+      color: #ffae42;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+    }
+    .footer-links,
+    .footer-legal,
+    .footer-social,
+    .footer-trust {
+      list-style: none;
+      padding: 0; 
+      margin: 0;
+    }
+    .footer-links li,
+    .footer-legal li,
+    .footer-social li,
+    .footer-trust li {
+      margin-bottom: 10px;
+    }
+    .footer-links a,
+    .footer-legal a,
+    .footer-social a,
+    .footer-brand a,
+    .footer-contact a {
+      color: #fafafa;
+      text-decoration: none;
+      transition: color .22s;
+      position: relative;
+    }
+    .footer-links a:hover,
+    .footer-legal a:hover,
+    .footer-brand a:hover,
+    .footer-social a:hover {
+      color: #ffb347;
+    }
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .footer-social a {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      text-align: center;
+      line-height: 32px;
+      color: #fff;
+      font-size: 1.3rem;
+      transition: background .16s, color .22s;
+    }
+    .footer-social a:hover {
+      background: #ffae42;
+      color: #24243e;
+    }
+    .footer-contact span {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 0.98rem;
+    }
+    .footer-brand-logo {
+      width: 54px; height: 54px;
+      border-radius: 18px; 
+      margin-bottom: 0.6em;
+      vertical-align: middle;
+    }
+    .footer-brand-desc {
+      color: #e3e3e3;
+      font-size: 0.97em;
+      margin-top: 6px;
+      margin-bottom: 12px;
+    }
+    .footer-trust {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .footer-trust img {
+      width: 42px; height: 26px; display: inline-block; border-radius: 4px;
+      background: #fff;
+      object-fit: contain;
+      margin-right: 4px;
+    }
+    .footer-legal {
+      margin-top: 10px;
+    }
+    .footer-bottom {
+      text-align: center;
+      color: #cecaca;
+      border-top: 1px solid #3c3c57;
+      font-size: 0.96em;
+      margin-top: 20px;
+      padding-top: 8px;
+      letter-spacing: 0.04em;
+    }
+    /* Responsive tweaks */
+    @media (max-width: 700px) {
+      .footer-content { padding: 0 10px; gap:20px;}
+      .footer-section h3 { margin-bottom: 12px;}
+    }
+    

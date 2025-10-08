@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="css/ContactUs.css" />
+  <link rel="stylesheet" href="css/nav.css"/>
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/hero.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar-sec-container">
+        <div class="navbar-sec-content">
+            <!-- Logo Section -->
+            <div class="navbar-sec-logo">
+                <div class="navbar-sec-logo-icon">
+                    <img src="./assets profenaaa/Profenaa logo.png" alt="" width="100%" height="100%" style="border-radius: 50%;">
+                </div>
+                <span class="navbar-sec-logo-text">Profenaa Charitable Trust</span>
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <ul class="navbar-sec-menu">
+                <li class="navbar-sec-menu-item">
+                    <a href="./index.html" class="navbar-sec-menu-link navbar-sec-active">HOME</a>
+                </li>
+                <li class="navbar-sec-menu-item navbar-sec-dropdown">
+                    <a href="./AboutUsinter.html" class="navbar-sec-menu-link">
+                        ABOUT US
+                        <i class="fas fa-chevron-down navbar-sec-dropdown-icon"></i>
+                    </a>
+                    <div class="navbar-sec-dropdown-menu">
+                       <a href="#" class="navbar-sec-dropdown-link">Mission & Vision</a>
+                        <a href="./AboutUs.html" class="navbar-sec-dropdown-link">Board Members</a>
+                        <a href="#" class="navbar-sec-dropdown-link">Trustees</a>
+                    </div>
+                </li>
+                <li class="navbar-sec-menu-item navbar-sec-dropdown">
+                    <a href="./Whatwedo.html" class="navbar-sec-menu-link">
+                        WHAT WE DO
+                        <i class="fas fa-chevron-down navbar-sec-dropdown-icon"></i>
+                    </a>
+                    <div class="navbar-sec-dropdown-menu">
+                      <a href="#" class="navbar-sec-dropdown-link">Skill Development Programs</a>
+                        <a href="#" class="navbar-sec-dropdown-link">Scholarship Schemes</a>
+                        <a href="#" class="navbar-sec-dropdown-link">Education Programs</a>
+                        <a href="#" class="navbar-sec-dropdown-link">Healthcare Initiatives</a>
+                        <a href="#" class="navbar-sec-dropdown-link">Community Development</a>
+                        <a href="#" class="navbar-sec-dropdown-link">Environmental Projects</a>
+                    </div>
+                </li>
+                <li class="navbar-sec-menu-item">
+                    <a href="./ContactUs.html" class="navbar-sec-menu-link">CONTACT</a>
+                </li>
+                <li class="navbar-sec-menu-item">
+                    <a href="./Donate.html" class="navbar-sec-menu-link navbar-sec-donate">DONATE</a>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="navbar-sec-mobile-toggle">
+                <span class="navbar-sec-hamburger"></span>
+                <span class="navbar-sec-hamburger"></span>
+                <span class="navbar-sec-hamburger"></span>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="navbar-sec-mobile-menu">
+            <a href="./index.html" class="navbar-sec-mobile-link navbar-sec-active">HOME</a>
+            <div class="navbar-sec-mobile-dropdown">
+                <a href="./AboutUsinter.html" class="navbar-sec-mobile-link navbar-sec-mobile-dropdown-toggle">
+                    ABOUT US
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="navbar-sec-mobile-dropdown-content">
+                    <a href="#" class="navbar-sec-dropdown-link">Mission & Vision</a>
+                        <a href="./AboutUs.html" class="navbar-sec-dropdown-link">Board Members</a>
+                        <a href="#" class="navbar-sec-mobile-sublink">Trustees</a>
+                </div>
+            </div>
+            <div class="navbar-sec-mobile-dropdown">
+                <a href="./Whatwedo.html" class="navbar-sec-mobile-link navbar-sec-mobile-dropdown-toggle">
+                    WHAT WE DO
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="navbar-sec-mobile-dropdown-content">
+                    <a href="#" class="navbar-sec-mobile-sublink">Skill Development Programs</a>
+                    <a href="#" class="navbar-sec-mobile-sublink">Scholarship Schemes</a>
+                    <a href="#" class="navbar-sec-mobile-sublink">Education Programs</a>
+                    <a href="#" class="navbar-sec-mobile-sublink">Healthcare Initiatives</a>
+                    <a href="#" class="navbar-sec-mobile-sublink">Community Development</a>
+                    <a href="#" class="navbar-sec-mobile-sublink">Environmental Projects</a>
+                </div>
+            </div>
+            <a href="./ContactUs.html" class="navbar-sec-mobile-link">CONTACT</a>
+            <a href="#" class="navbar-sec-mobile-link navbar-sec-donate">DONATE</a>
+        </div>
+    </nav>
+
+    <section class="hero-img-connect-all-container">
+    <div class="hero-img-connect-all-overlay">
+      <h1 class="hero-img-connect-all-title">Contact Us</h1>
+      <p class="hero-img-connect-all-subtitle">Skill Into Rural India</p>
+    </div>
+    </section>
+
+
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p class="welcome">We’re here to help and would love to hear from you. Please reach out with any questions or comments.</p>
+
+        <form id="contactForm" method="POST" action="https://api.web3forms.com/submit" novalidate>
+          <!-- Web3Forms API Key -->
+          <input type="hidden" name="access_key" value="b23f9c20-84a6-4b89-9ffc-635525de78bd" />
+          
+          <!-- Optional: From name to appear in the email -->
+          <input type="hidden" name="from_name" value="Website Contact Form" />
+          
+          <!-- Optional: Set reply-to email -->
+          <input type="hidden" name="replyto" value="profenaa@trust.com" />
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="thanks-message" id="thanksMessage" style="display: none;">Thank you for contacting us! We will get back to you shortly.</div>
+
+        <div class="contact-info">
+          <div class="contact-item"><span>Phone:</span> +91 96987 30528 </div>
+          <div class="contact-item"><span>Email:</span>  </div>
+          <div class="contact-item"><span>Address:</span> Profenaa Charitable Trust <br> first floor, Agniamman complex,<br> No 13/2, Saldana road, <br> Pollachi, Tamil Nadu 642001</div>
+          <!-- Placeholder for Google Map if needed       first floor, Agniamman complex, No 13/2, Saldana road, Palaghat, Pollachi, Tamil Nadu-642001-->
+          <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.9581335906905!2d77.0055524!3d10.660357699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8394f6fe6b9a9%3A0xa3f908504b02ffe5!2sPROFENAA%20CHARITABLE%20TRUST!5e0!3m2!1sen!2sin!4v1757768881409!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+
+        <div class="business-hours">
+          Need any help, Hours: Mon - Fri, 9am – 6pm
+        </div>
+
+        <p class="privacy-note">
+          We respect your privacy. Your information will only be used to respond to your inquiry. Read our <a href="#">Privacy Policy</a>.
+        </p>
+      </div>
+
+
+          <!-- ///////////////////foooooter  staaaaarts by gowtham  -->
+
+
+    <footer class="footer-main">
+    <div class="footer-content">
+      <!-- Brand/Identity -->
+      <div class="footer-section footer-brand">
+        <img class="footer-brand-logo" src="./assets profenaaa/Profenaa logo.png" alt="Logo">
+        <div class="footer-brand-desc">Profenaa Charitable Trust "give ypur hands with Profenaa".<br> ISO 9001</div>
+        <div><a href="./AboutUs.html">Learn more about us →</a></div>
+      </div>
+      <!-- Navigation Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="./AboutUs.html">About Us</a></li>
+          <li><a href="./ContactUs.html">Contact</a></li>
+          <li><a href="./Donate.html">Donate</a></li>
+          <li><a href="./Whatwedo.html">What we do</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Pricing / Plans</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+      <!-- Contact Information -->
+      <div class="footer-section footer-contact">
+        <h3>Contact</h3>
+        <span>Profenaa Charitable Trust<br> Pollachi,Coimbature, <br> Tamilnadu, India</span>
+        <span>📞 <a href="tel:+91 96987 30528">+91 96987 30528</a></span>
+        <span>✉️ <a href="mailto:www.profenaa trust.com">www.profenaa trust.com</a></span>
+        <span>Connect with Us: Mon-Sat 9:00 AM–8:00 PM</span>
+        <span><a href="#">Contact Form</a></span>
+      </div>
+      <!-- Social/E-Commerce -->
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div>
+          <ul class="footer-social">
+            <li><a href="#" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#" title="Twitter/X" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+           
+          </ul>
+        </div>
+        
+      </div>
+      <!-- Legal & Compliance -->
+      <div class="footer-section">
+        <h3>Legal & Compliance</h3>
+        <ul class="footer-legal">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="footer-year"></span> Profenaa Infotech. All rights reserved.
+    </div>
+  </footer>
+  <!-- //////////////////////////foooooter ends //////////////////////// -->
+
+
+<script>
+  const form = document.getElementById('contactForm');
+  const thanksMessage = document.getElementById('thanksMessage');
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (form.checkValidity()) {
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          form.style.display = 'none';
+          thanksMessage.style.display = 'block';
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        alert("An error occurred. Please try again later.");
+      }
+    } else {
+      form.reportValidity();
+    }
+  });
+</script>
+<script src="./js/hero.js"></script>
+<script src="./js/nav.js"></script>
+</body>
+</html>

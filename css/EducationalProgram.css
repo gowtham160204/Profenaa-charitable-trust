@@ -1,0 +1,553 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+    min-height: 100vh;
+}
+
+.education-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Hero Section */
+.education-hero {
+    width: 100%;
+    padding: 80px 20px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.education-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(22,79,28,0.05) 0%, transparent 70%);
+    animation: "education-float" 6s ease-in-out infinite;
+}
+
+.education-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.education-hero-title {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: "education-slideInDown" 1s ease-out;
+    color: #164f1c;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.education-hero-subtitle {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    animation: "education-slideInUp" 1s ease-out 0.3s both;
+    color: #000;
+}
+
+.education-hero-image {
+    margin-top: 40px;
+    animation: "education-zoomIn" 1s ease-out 0.6s both;
+}
+
+.education-main-img {
+    max-width: 600px;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.education-main-img:hover {
+    transform: scale(1.05);
+}
+
+/* Mission Section */
+.education-mission {
+    padding: 80px 20px;
+    background: #fff;
+    width: 100%;
+}
+
+.education-mission-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.education-mission-text {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #000;
+    animation: "education-fadeIn" 1s ease-out;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.education-mission-text::before {
+    content: '"';
+    font-size: 4em;
+    color: #164f1c;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: Georgia, serif;
+}
+
+/* Section Titles */
+.education-section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #164f1c;
+    position: relative;
+    animation: "education-slideInDown" 0.8s ease-out;
+}
+
+.education-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #164f1c;
+    border-radius: 2px;
+}
+
+/* Objectives Section */
+.education-objectives {
+    padding: 80px 20px;
+    background: #fff;
+    width: 100%;
+}
+
+.education-objectives-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.education-objective-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    animation: "education-slideInUp" 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.education-objective-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(22,79,28,0.05) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+}
+
+.education-objective-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.education-objective-card:hover::before {
+    transform: scale(1);
+}
+
+.education-objective-card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.education-objective-image {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 150px;
+}
+
+.education-objective-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    animation: education-imageLoad1s ease-out forwards;
+}
+
+.education-objective-card:hover .education-objective-img {
+    transform: scale(1.1);
+}
+
+/* Initiatives Section */
+.education-initiatives {
+    padding: 80px 20px;
+    background: #fff;
+    width: 100%;
+}
+
+.education-initiatives-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.education-initiative-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    animation: "education-fadeInUp" 0.8s ease-out;
+    position: relative;
+}
+
+.education-initiative-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.education-initiative-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.education-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    animation: education-imageSlide 1s ease-out;
+}
+
+.education-initiative-card:hover .education-card-img {
+    transform: scale(1.1);
+}
+
+.education-initiative-content {
+    padding: 30px;
+}
+
+.education-initiative-content h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #164f1c;
+    font-weight: 600;
+}
+
+.education-initiative-content p {
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Impact Section */
+.education-impact {
+    padding: 80px 20px;
+    background: #fff;
+    color: #000;
+    width: 100%;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+}
+
+.education-impact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.education-impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.education-stat-card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    animation: "education-slideInUp" 0.8s ease-out;
+}
+
+.education-stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.education-stat-number {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #164f1c;
+}
+
+.education-stat-label {
+    font-size: 1.1em;
+    color: #000;
+}
+
+/* Animations */
+@keyframes "education-slideInDown" {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes "education-slideInUp" {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes "education-fadeIn" {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes "education-fadeInUp" {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes "education-zoomIn" {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes "education-bounce" {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes "education-float" {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+@keyframes education-imageSlide {
+    from {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .education-hero-title {
+        font-size: 2.8em;
+    }
+    
+    .education-section-title {
+        font-size: 2.2em;
+    }
+    
+    .education-initiatives-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-hero {
+        padding: 60px 15px;
+    }
+    
+    .education-hero-title {
+        font-size: 2.2em;
+    }
+    
+    .education-hero-subtitle {
+        font-size: 1.1em;
+    }
+    
+    .education-main-img {
+        height: 250px;
+    }
+    
+    .education-section-title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    
+    .education-objectives-grid,
+    .education-initiatives-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .education-objective-card,
+    .education-initiative-card {
+        margin: 0 10px;
+    }
+    
+    .education-impact-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .education-mission,
+    .education-objectives,
+    .education-initiatives,
+    .education-impact {
+        padding: 60px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-hero-title {
+        font-size: 1.8em;
+    }
+    
+    .education-hero-subtitle {
+        font-size: 1em;
+    }
+    
+    .education-main-img {
+        height: 200px;
+    }
+    
+    .education-section-title {
+        font-size: 1.5em;
+    }
+    
+    .education-objective-card,
+    .education-initiative-content {
+        padding: 25px 20px;
+    }
+    
+    .education-mission-text {
+        padding: 20px;
+        font-size: 1.1em;
+    }
+}
+
+/* Loading Animation for Images */
+.education-card-img,
+.education-main-img {
+    opacity: 0;
+    animation: education-imageLoad1s ease-out forwards;
+}
+
+@keyframes education-imageLoad{
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Scroll Animation Classes */
+.education-animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.education-animate-on-scroll.education-animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+.hero-img-connect-all-container {
+  height: 80vh;
+ background: url('../assets/pexels-themeditators-14325738.jpg') no-repeat center center;  /* https://images.unsplash.com/photo-1507525428034-b723cf961d3e */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  position: relative;
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}

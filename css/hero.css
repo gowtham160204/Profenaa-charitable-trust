@@ -1,0 +1,40 @@
+
+/*.hero-img-connect-all-container {
+  height: 80vh;
+ background: url('../assets/pexels-mirza-sifat-ahmed-2620318-31417428.jpg') no-repeat center center;   https://images.unsplash.com/photo-1507525428034-b723cf961d3e */
+  /* background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  position: relative;
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+} */
+
+/* Overlay for text */
+.hero-img-connect-all-overlay {
+  background:linear-gradient(to right, rgba(0, 0, 0, 0.937), rgba(0, 0, 0, 0.166));
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 10px;
+   z-index: -1;
+}
+
+.hero-img-connect-all-title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 10px;
+   z-index: -1;
+}
+
+.hero-img-connect-all-subtitle {
+  font-size: 1.2rem;
+  color: #f4f4f4;
+   z-index: -1;
+}
