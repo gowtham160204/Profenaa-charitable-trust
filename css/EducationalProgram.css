@@ -43,7 +43,7 @@ body {
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(22,79,28,0.05) 0%, transparent 70%);
-    animation: "education-float" 6s ease-in-out infinite;
+    animation: education-float 6s ease-in-out infinite;
 }
 
 .education-hero-content {
@@ -57,7 +57,7 @@ body {
     font-size: 3.5em;
     font-weight: 700;
     margin-bottom: 20px;
-    animation: "education-slideInDown" 1s ease-out;
+    animation: education-slideInDown 1s ease-out;
     color: #164f1c;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
@@ -65,13 +65,13 @@ body {
 .education-hero-subtitle {
     font-size: 1.4em;
     margin-bottom: 40px;
-    animation: "education-slideInUp" 1s ease-out 0.3s both;
+    animation: education-slideInUp 1s ease-out 0.3s both;
     color: #000;
 }
 
 .education-hero-image {
     margin-top: 40px;
-    animation: "education-zoomIn" 1s ease-out 0.6s both;
+    animation: education-zoomIn 1s ease-out 0.6s both;
 }
 
 .education-main-img {
@@ -105,7 +105,7 @@ body {
     font-size: 1.2em;
     line-height: 1.8;
     color: #000;
-    animation: "education-fadeIn" 1s ease-out;
+    animation: education-fadeIn 1s ease-out;
     padding: 30px;
     background: #fff;
     border-radius: 15px;
@@ -130,7 +130,7 @@ body {
     margin-bottom: 50px;
     color: #164f1c;
     position: relative;
-    animation: "education-slideInDown" 0.8s ease-out;
+    animation: education-slideInDown 0.8s ease-out;
 }
 
 .education-section-title::after {
@@ -167,7 +167,7 @@ body {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
-    animation: "education-slideInUp" 0.8s ease-out;
+    animation: education-slideInUp 0.8s ease-out;
     position: relative;
     overflow: hidden;
 }
@@ -242,7 +242,7 @@ body {
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
-    animation: "education-fadeInUp" 0.8s ease-out;
+    animation: education-fadeInUp 0.8s ease-out;
     position: relative;
 }
 
@@ -313,7 +313,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
-    animation: "education-slideInUp" 0.8s ease-out;
+    animation: education-slideInUp 0.8s ease-out;
 }
 
 .education-stat-card:hover {
@@ -334,7 +334,7 @@ body {
 }
 
 /* Animations */
-@keyframes "education-slideInDown" {
+@keyframes education-slideInDown {
     from {
         opacity: 0;
         transform: translateY(-50px);
@@ -345,7 +345,7 @@ body {
     }
 }
 
-@keyframes "education-slideInUp" {
+@keyframes education-slideInUp {
     from {
         opacity: 0;
         transform: translateY(50px);
@@ -356,7 +356,7 @@ body {
     }
 }
 
-@keyframes "education-fadeIn" {
+@keyframes education-fadeIn {
     from {
         opacity: 0;
     }
@@ -365,7 +365,7 @@ body {
     }
 }
 
-@keyframes "education-fadeInUp" {
+@keyframes education-fadeInUp {
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -376,7 +376,7 @@ body {
     }
 }
 
-@keyframes "education-zoomIn" {
+@keyframes education-zoomIn {
     from {
         opacity: 0;
         transform: scale(0.5);
@@ -387,7 +387,7 @@ body {
     }
 }
 
-@keyframes "education-bounce" {
+@keyframes education-bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
@@ -399,7 +399,7 @@ body {
     }
 }
 
-@keyframes "education-float" {
+@keyframes education-float {
     0%, 100% {
         transform: translateY(0px) rotate(0deg);
     }
